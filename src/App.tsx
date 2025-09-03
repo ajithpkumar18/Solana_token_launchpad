@@ -1,8 +1,7 @@
 import './App.css'
-import LaunchPad from './LaunchPad'
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+import LaunchPad from './LaunchPad';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 function App() {
@@ -13,6 +12,7 @@ function App() {
         <WalletProvider wallets={[]}>
           <WalletModalProvider>
             <WalletMultiButton />
+            <WalletDisconnectButton />
             <LaunchPad />
           </WalletModalProvider>
         </WalletProvider>
